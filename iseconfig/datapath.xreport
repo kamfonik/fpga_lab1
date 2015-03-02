@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2015-03-02T15:01:11</DateModified>
+  <DateModified>2015-03-02T16:25:02</DateModified>
   <ModuleName>datapath</ModuleName>
   <SummaryTimeStamp>Unknown</SummaryTimeStamp>
   <SavedFilePath>C:/Users/kamfonik/Documents/Git_Repos/fpga_lab1/iseconfig/datapath.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>C:/Users/kamfonik/Documents/Git_Repos/fpga_lab1</ImplementationReportsDirectory>
+  <ImplementationReportsDirectory>C:/Users/kamfonik/Documents/Git_Repos/fpga_lab1\</ImplementationReportsDirectory>
   <DateInitialized>2015-03-02T15:01:09</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>
