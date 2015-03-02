@@ -20,5 +20,5 @@ Compiling module glbl
 Time Resolution for simulation is 1ps.
 Compiled 6 Verilog Units
 Built simulation executable C:/Users/kamfonik/Documents/Git_Repos/fpga_lab1/t_datapath_isim_beh.exe
-Fuse Memory Usage: 26792 KB
-Fuse CPU Usage: 437 ms
+Fuse Memory Usage: 26816 KB
+Fuse CPU Usage: 421 ms

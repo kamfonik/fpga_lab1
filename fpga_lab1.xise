@@ -35,10 +35,6 @@
       <association xil_pn:name="PostRouteSimulation" xil_pn:seqID="13"/>
       <association xil_pn:name="PostTranslateSimulation" xil_pn:seqID="13"/>
     </file>
-    <file xil_pn:name="decoder.v" xil_pn:type="FILE_VERILOG">
-      <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="0"/>
-      <association xil_pn:name="Implementation" xil_pn:seqID="14"/>
-    </file>
     <file xil_pn:name="instr_fetch.v" xil_pn:type="FILE_VERILOG">
       <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="2"/>
       <association xil_pn:name="Implementation" xil_pn:seqID="13"/>
@@ -49,22 +45,6 @@
       <association xil_pn:name="PostRouteSimulation" xil_pn:seqID="14"/>
       <association xil_pn:name="PostTranslateSimulation" xil_pn:seqID="14"/>
     </file>
-    <file xil_pn:name="t_decoder.v" xil_pn:type="FILE_VERILOG">
-      <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="0"/>
-      <association xil_pn:name="PostMapSimulation" xil_pn:seqID="27"/>
-      <association xil_pn:name="PostRouteSimulation" xil_pn:seqID="27"/>
-      <association xil_pn:name="PostTranslateSimulation" xil_pn:seqID="27"/>
-    </file>
-    <file xil_pn:name="two_one_MUX.v" xil_pn:type="FILE_VERILOG">
-      <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="0"/>
-      <association xil_pn:name="Implementation" xil_pn:seqID="31"/>
-    </file>
-    <file xil_pn:name="t_two_one_MUX.v" xil_pn:type="FILE_VERILOG">
-      <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="0"/>
-      <association xil_pn:name="PostMapSimulation" xil_pn:seqID="32"/>
-      <association xil_pn:name="PostRouteSimulation" xil_pn:seqID="32"/>
-      <association xil_pn:name="PostTranslateSimulation" xil_pn:seqID="32"/>
-    </file>
     <file xil_pn:name="datapath.v" xil_pn:type="FILE_VERILOG">
       <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="4"/>
       <association xil_pn:name="Implementation" xil_pn:seqID="36"/>
@@ -74,26 +54,6 @@
       <association xil_pn:name="PostMapSimulation" xil_pn:seqID="38"/>
       <association xil_pn:name="PostRouteSimulation" xil_pn:seqID="38"/>
       <association xil_pn:name="PostTranslateSimulation" xil_pn:seqID="38"/>
-    </file>
-    <file xil_pn:name="sign_ext_12_16.v" xil_pn:type="FILE_VERILOG">
-      <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="0"/>
-      <association xil_pn:name="Implementation" xil_pn:seqID="61"/>
-    </file>
-    <file xil_pn:name="t_sign_ext_12_16.v" xil_pn:type="FILE_VERILOG">
-      <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="0"/>
-      <association xil_pn:name="PostMapSimulation" xil_pn:seqID="62"/>
-      <association xil_pn:name="PostRouteSimulation" xil_pn:seqID="62"/>
-      <association xil_pn:name="PostTranslateSimulation" xil_pn:seqID="62"/>
-    </file>
-    <file xil_pn:name="pc_select.v" xil_pn:type="FILE_VERILOG">
-      <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="0"/>
-      <association xil_pn:name="Implementation" xil_pn:seqID="74"/>
-    </file>
-    <file xil_pn:name="t_pc_select.v" xil_pn:type="FILE_VERILOG">
-      <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="0"/>
-      <association xil_pn:name="PostMapSimulation" xil_pn:seqID="75"/>
-      <association xil_pn:name="PostRouteSimulation" xil_pn:seqID="75"/>
-      <association xil_pn:name="PostTranslateSimulation" xil_pn:seqID="75"/>
     </file>
   </files>
 
