@@ -40,7 +40,7 @@ end
 
 always@(posedge clk)
 begin
-	delay_reg <= {delay_reg[6:0], button};
+	delay_reg <= {delay_reg[2:0], button};
 	if (delay_reg == 4'b1111) begin
 		clean = 1;
 	end else if (delay_reg ==4'b0000) begin

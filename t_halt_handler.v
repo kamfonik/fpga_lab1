@@ -20,20 +20,20 @@ module t_halt_handler;
 	reg button;
 
 	// Outputs
-	wire clean_btn;
+	//wire clean_btn;
 	wire clk_out;
-	wire state;
-	wire [3:0] delay_reg;
+	//wire state;
+	//wire [3:0] delay_reg;
 
 	// Instantiate the Unit Under Test (UUT)
 	halt_handler uut (
 		.clk(clk), 
 		.clk_dis(clk_dis), 
 		.button(button), 
-		.clk_out(clk_out),
-		.state(state),
-		.clean_btn(clean_btn),
-		.delay_reg(delay_reg)
+		.clk_out(clk_out)
+		//.state(state),
+		//.clean_btn(clean_btn)
+		//.delay_reg(delay_reg)
 	);
 
 	initial begin

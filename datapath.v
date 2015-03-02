@@ -11,40 +11,54 @@
 // Description: 	Datapath module in which all other modules get instantiated
 ////////////////////////////////////////////////////////////////////////////////////
 module datapath(
-clk,
-resume_btn,
-Rm,
-Rn,
-pc,
+	input clk,					// FPGA board clock signal
+	input wire resume,		// resume-execution pushbutton
+	
+	
+	// all following "inputs"/"outputs" will eventually be internal wires
+
+	//HALT HANDLER
+	input clk_dis,
+	
+	//INSTRUCTION FETCH
+	input [15:0] pc,		
+	input [15:0] instr,
+	
+	output wire fetch_clk,
+	output wire [11:0] instr_addr,
+	output wire [3:0] opcode,
+	output wire [5:0] Rm,
+	output wire [5:0] Rn,
+	output wire [11:0] jump_addr
+	
+	
+	
+);
+
+
+
+//internal wires
+
+	//wire fetch_clk;		// clock signal passed from halt_handler to instr_fetch
+	//wire clk_dis;			// disable signal from halt instruction
+
+
+
 
 //not really outputs
-clk_dis,
-jump_en,
-fetch_clk,
-opcode,
-jump_addr,
-next_pc,
-instr_addr,
-instr
-    );
+//clk_dis,
+//jump_en,
+//next_pc,
 	 
 //INPUTS
-input clk;
-input resume_btn;
-input [15:0] pc;				//for now
-input [15:0] instr;			//for now
+//input clk;
+//input resume_btn;
+
 
 //DECODER CONTROL SIGNALS
-output wire clk_dis;
-output wire jump_en;
+//output wire clk_dis;
+//output wire jump_en;
 
-//INSTRUCTION FETCH WIRES
-output wire fetch_clk;		//input
-output wire [3:0] opcode; 	//outputs
-output wire [11:0] jump_addr;
-output wire [15:0] next_pc;
-output wire [11:0] instr_addr;
-//output wire [15:0] instr;
 
 /*
 // a fake memory for testing purposes
@@ -52,15 +66,11 @@ output wire [11:0] instr_addr;
 reg [15:0] instr_mem [11:0];*/
 
 
-//OUTPUTS
-output reg [5:0] Rm;
-output reg [5:0] Rn;
-
 	 
 halt_handler HALT(
 	.clk(clk),
 	.clk_dis(clk_dis),
-	.button(resume_btn),
+	.button(resume),
 	.clk_out(fetch_clk)
 );
 
@@ -72,18 +82,17 @@ instr_fetch IF(
 	.opcode(opcode),
 	.Rm(Rm),
 	.Rn(Rn),
-	.jump_addr(jump_addr),
-	.next_pc(next_pc)
+	.jump_addr(jump_addr)
 );
 
-decoder DECODE(
+/*decoder DECODE(
 	.opcode(opcode),
 	.clk_dis(clk_dis),
 	.jump_en(jump_en)
-);
+);*/
 
 
-
+/*NOTE THAT THE OPCODES ARE IN THE WRONG PLACE, FIX BEFORE USING*/
 /*initial begin
 	instr_mem[12'b0000_0000_0000] = 16'b0000_0010_0000_1000;	//1
 	instr_mem[12'b0000_0000_0001] = 16'b0000_0000_0000_0000; //3

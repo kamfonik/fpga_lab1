@@ -1,0 +1,29 @@
+Command line:
+   t_halt_handler_isim_beh.exe
+     -simmode  gui
+     -simrunnum  1
+     -socket  49237
+
+Mon Mar 02 15:46:22 2015
+
+
+ Elaboration Time: 0.0625 sec
+
+ Current Memory Usage: 664.662 Meg
+
+ Total Signals          : 21
+ Total Nets             : 22
+ Total Signal Drivers   : 11
+ Total Blocks           : 4
+ Total Primitive Blocks : 2
+ Total Processes        : 20
+ Total Traceable Variables  : 25
+ Total Scalar Nets and Variables : 112
+Total Line Count : 66
+
+ Total Simulation Time: 0.0625 sec
+
+ Current Memory Usage: 979.235 Meg
+
+Mon Mar 02 15:46:53 2015
+

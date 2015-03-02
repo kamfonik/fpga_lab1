@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='utf-8'?>
 <!--This is an ISE project configuration file.-->
 <!--It holds project specific layout data for the projectmgr plugin.-->
 <!--Copyright (c) 1995-2009 Xilinx, Inc.  All rights reserved.-->
@@ -7,16 +7,17 @@
    <ItemView engineview="SynthesisOnly" guiview="Source" compilemode="AutoCompile" >
       <ClosedNodes>
          <ClosedNodesVersion>2</ClosedNodesVersion>
+         <ClosedNode>/datapath C:|Users|kamfonik|Documents|Git_Repos|fpga_lab1|datapath.v</ClosedNode>
          <ClosedNode>/halt_handler C:|Users|kamfonik|Documents|Git_Repos|fpga_lab1|fpga_lab1|halt_handler.v</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem>halt_handler (C:/Users/kamfonik/Documents/Git_Repos/fpga_lab1/fpga_lab1/halt_handler.v)</SelectedItem>
+         <SelectedItem>datapath (C:/Users/kamfonik/Documents/Git_Repos/fpga_lab1/datapath.v)</SelectedItem>
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000202000000010000000100000064000000e9000000020000000000000000000000000200000064ffffffff000000810000000300000002000000e90000000100000003000000000000000100000003</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000100000000000000000000000000000000020200000001000000010000006400000102000000020000000000000000000000000200000064ffffffff000000810000000300000002000001020000000100000003000000000000000100000003</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >true</UserChangedColumnWidths>
-      <CurrentItem>halt_handler (C:/Users/kamfonik/Documents/Git_Repos/fpga_lab1/fpga_lab1/halt_handler.v)</CurrentItem>
+      <CurrentItem>datapath (C:/Users/kamfonik/Documents/Git_Repos/fpga_lab1/datapath.v)</CurrentItem>
    </ItemView>
    <ItemView engineview="SynthesisOnly" sourcetype="DESUT_VERILOG" guiview="Process" >
       <ClosedNodes>
@@ -62,18 +63,26 @@
    <ItemView engineview="BehavioralSim" guiview="Source" compilemode="AutoCompile" >
       <ClosedNodes>
          <ClosedNodesVersion>2</ClosedNodesVersion>
+         <ClosedNode>/t_datapath C:|Users|kamfonik|Documents|Git_Repos|fpga_lab1|t_datapath.v</ClosedNode>
+         <ClosedNode>/t_datapath C:|Users|kamfonik|Documents|Git_Repos|fpga_lab1|t_datapath.v/uut - datapath</ClosedNode>
          <ClosedNode>/t_debouncer C:|Users|kamfonik|Documents|Git_Repos|fpga_lab1|fpga_lab1|t_debouncer.v</ClosedNode>
+         <ClosedNode>/t_debouncer C:|Users|kamfonik|Documents|Git_Repos|fpga_lab1|t_debouncer.v</ClosedNode>
+         <ClosedNode>/t_decoder C:|Users|kamfonik|Documents|Git_Repos|fpga_lab1|t_decoder.v</ClosedNode>
          <ClosedNode>/t_halt_handler C:|Users|kamfonik|Documents|Git_Repos|fpga_lab1|fpga_lab1|t_halt_handler.v</ClosedNode>
          <ClosedNode>/t_halt_handler C:|Users|kamfonik|Documents|Git_Repos|fpga_lab1|fpga_lab1|t_halt_handler.v/uut - halt_handler</ClosedNode>
+         <ClosedNode>/t_halt_handler C:|Users|kamfonik|Documents|Git_Repos|fpga_lab1|t_halt_handler.v</ClosedNode>
+         <ClosedNode>/t_pc_select C:|Users|kamfonik|Documents|Git_Repos|fpga_lab1|t_pc_select.v</ClosedNode>
+         <ClosedNode>/t_sign_ext_12_16 C:|Users|kamfonik|Documents|Git_Repos|fpga_lab1|t_sign_ext_12_16.v</ClosedNode>
+         <ClosedNode>/t_two_one_MUX C:|Users|kamfonik|Documents|Git_Repos|fpga_lab1|t_two_one_MUX.v</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem>decoder (C:/Users/kamfonik/Documents/Git_Repos/fpga_lab1/fpga_lab1/decoder.v)</SelectedItem>
+         <SelectedItem>t_datapath (C:/Users/kamfonik/Documents/Git_Repos/fpga_lab1/t_datapath.v)</SelectedItem>
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000202000000010000000100000064000000eb000000020000000000000000000000000200000064ffffffff000000810000000300000002000000eb0000000100000003000000000000000100000003</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000100000000000000000000000000000000020200000001000000010000006400000102000000020000000000000000000000000200000064ffffffff000000810000000300000002000001020000000100000003000000000000000100000003</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >true</UserChangedColumnWidths>
-      <CurrentItem>decoder (C:/Users/kamfonik/Documents/Git_Repos/fpga_lab1/fpga_lab1/decoder.v)</CurrentItem>
+      <CurrentItem>t_datapath (C:/Users/kamfonik/Documents/Git_Repos/fpga_lab1/t_datapath.v)</CurrentItem>
    </ItemView>
    <ItemView engineview="BehavioralSim" sourcetype="" guiview="Process" >
       <ClosedNodes>
@@ -94,13 +103,13 @@
          <ClosedNodesVersion>1</ClosedNodesVersion>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem></SelectedItem>
+         <SelectedItem>Simulate Behavioral Model</SelectedItem>
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
       <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000000f8000000010000000100000000000000000000000064ffffffff000000810000000000000001000000f80000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
-      <CurrentItem></CurrentItem>
+      <CurrentItem>Simulate Behavioral Model</CurrentItem>
    </ItemView>
    <SourceProcessView>000000ff00000000000000020000011b0000011b01000000050100000002</SourceProcessView>
    <CurrentView>Behavioral Simulation</CurrentView>

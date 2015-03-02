@@ -11,7 +11,6 @@
 //
 //						Receives instruction from fetch unit.
 //						Outputs control signals to other modules.
-//
 //////////////////////////////////////////////////////////////////////////////////
 module decoder(
 opcode,
