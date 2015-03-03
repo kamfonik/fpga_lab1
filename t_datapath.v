@@ -16,7 +16,7 @@ module t_datapath;
 	reg clk;
 	reg resume;
 	reg [15:0] pc;
-	reg [15:0] instr;
+	//reg [15:0] instr;
 	
 	// Outputs
 	wire fetch_clk;
@@ -28,6 +28,7 @@ module t_datapath;
 	wire [11:0] jump_addr;
 	//wire next_pc;
 	wire [11:0] instr_addr;
+	wire [15:0] instr;
 
 
 	// Instantiate the Unit Under Test (UUT)
@@ -49,8 +50,8 @@ module t_datapath;
 
 	initial begin
 		// Initialize Inputs
-		pc = 16'b0000_1111_0000_1111;
-		instr = 16'b1111_1111_1111_1111;	 //right now this is a nonsense value		
+		pc = 16'b0000_0000_0000_0000;
+		//instr = 16'b1111_1111_1111_1111;	 //right now this is a nonsense value		
 		clk = 0;
 		resume = 0;
 
@@ -59,8 +60,10 @@ module t_datapath;
         
 		// Add stimulus here
 		
-
-			#20 instr = 16'b0100_1111_0000_1111;
+		repeat (3) begin
+			#100 pc = pc + 1;
+		end
+/*			#20 instr = 16'b0100_1111_0000_1111;
 
 			#20 instr = instr + 1;
 			
@@ -71,23 +74,14 @@ module t_datapath;
 			#150 resume = 1;
 			#800 resume = 0;
 			
-			#20 instr = 16'b0011_0000_1111_1111;
+			#20 instr = 16'b0011_0000_1111_1111;*/
 
 			
 			
 			
 
 		
-		/*NOTE THAT THE OPCODES ARE IN THE WRONG PLACE, FIX BEFORE USING*/
-		/*initial begin
-		instr_mem[12'b0000_0000_0000] = 16'b0000_0010_0000_1000;	//1
-		instr_mem[12'b0000_0000_0001] = 16'b0000_0000_0000_0000; //3
-		instr_mem[12'b0000_0000_0010] = 16'b0000_0010_0000_0011; //4
-		instr_mem[12'b0000_0000_0011] = 16'b0000_0010_0000_1001; //5
-		instr_mem[12'b0000_0000_1000] = 16'b0000_0010_0000_0001; //2
-		instr_mem[12'b0000_0000_1001] = 16'b0000_0010_0000_0000; //6
-		instr_mem[12'b0000_0000_1001] = 16'b0000_0010_0000_0000; //7 - JUMPS BACK TO 1
-end*/
+
 
 	end
    

@@ -22,7 +22,7 @@ module datapath(
 	
 	//INSTRUCTION FETCH
 	input [15:0] pc,		
-	input [15:0] instr,
+	//input [15:0] instr,
 	
 	output wire fetch_clk,
 	output wire [11:0] instr_addr,
@@ -33,7 +33,10 @@ module datapath(
 	
 	//DECODER
 	output wire clk_dis,
-	output wire jump_en
+	output wire jump_en,
+	
+	//MEMORY
+	output [15:0] instr
 	
 );
 
@@ -92,6 +95,10 @@ decoder DECODE(
 	.jump_en(jump_en)
 );
 
+memory MEM(
+	.instr_addr(instr_addr),
+	.instr_out(instr)
+);
 
 /*NOTE THAT THE OPCODES ARE IN THE WRONG PLACE, FIX BEFORE USING*/
 /*initial begin
