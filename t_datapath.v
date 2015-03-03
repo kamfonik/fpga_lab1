@@ -17,12 +17,11 @@ module t_datapath;
 	reg resume;
 	reg [15:0] pc;
 	reg [15:0] instr;
-	reg clk_dis;
 	
 	// Outputs
 	wire fetch_clk;
-	//wire clk_dis;
-	//wire jump_en;
+	wire clk_dis;
+	wire jump_en;
 	wire [3:0] opcode;
 	wire [5:0] Rm;
 	wire [5:0] Rn;
@@ -43,43 +42,40 @@ module t_datapath;
 		.Rm(Rm), 
 		.Rn(Rn), 
 		.clk_dis(clk_dis), 
-		//.jump_en(jump_en), 
+		.jump_en(jump_en), 
 		.jump_addr(jump_addr) 
 		//.next_pc(next_pc),  
 	);
 
 	initial begin
 		// Initialize Inputs
-		pc = 0;
-		instr = 0;
+		pc = 16'b0000_1111_0000_1111;
+		instr = 16'b1111_1111_1111_1111;	 //right now this is a nonsense value		
 		clk = 0;
 		resume = 0;
-		clk_dis = 0;
 
 		// Wait 100 ns for global reset to finish
-		#100;
+		//#100;
         
 		// Add stimulus here
 		
 
-			#20 pc = 16'b0000_1111_0000_1111;
+			#20 instr = 16'b0100_1111_0000_1111;
 
-			#20 pc = instr + 1;
+			#20 instr = instr + 1;
 			
-			#20 clk_dis = 1;
-	
-			#20 clk_dis = 0;
-			
-			#20 pc = 16'b0000_0011_1111_0000;
+			#20 instr = 16'b0000_0000_0000_0000;	//halt	
 
 			#20 instr = instr + 1;
 			
 			#150 resume = 1;
 			#800 resume = 0;
 			
-			#20 pc = 16'b0000_0011_1111_1111;
+			#20 instr = 16'b0011_0000_1111_1111;
 
-			#20 instr = instr + 1;
+			
+			
+			
 
 		
 		/*NOTE THAT THE OPCODES ARE IN THE WRONG PLACE, FIX BEFORE USING*/

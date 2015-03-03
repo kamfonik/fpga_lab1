@@ -43,7 +43,7 @@ module t_halt_handler;
 		button = 0;
 
 		// Wait 100 ns for global reset to finish
-		#100;
+		//#100;
         
 		// Add stimulus here
 		repeat (3)

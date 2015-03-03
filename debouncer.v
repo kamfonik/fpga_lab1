@@ -15,23 +15,13 @@
 //
 //////////////////////////////////////////////////////////////////////////////////
 module debouncer(
-clk,
-button,
-clean,
-delay_reg
+	input clk,
+	input button,
+	
+	output reg clean,
+	output reg [3:0] delay_reg
 );
 
-//INPUTS	 
-input wire clk;
-input wire button;
-
-//OUTPUTS
-output reg clean;
-
-//INTERNAL
-output reg [3:0] delay_reg;
-
-//CODE
 
 initial begin
 	clean = 0;

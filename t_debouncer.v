@@ -34,7 +34,7 @@ module t_debouncer;
 		button = 0;*/
 
 		// Wait 100 ns for global reset to finish
-		#100;
+		//#100;
 	
 		// Initialize Inputs
 		clk = 0;

@@ -11,31 +11,18 @@
 // Description: 	Fetch 1 instruction per clock cycle according to the program counter
 ////////////////////////////////////////////////////////////////////////////////////
 module instr_fetch(
-clk,
-pc,
-instr,
-instr_addr,
-opcode,
-Rm,
-Rn,
-jump_addr
-//next_pc
+	input clk,			// clk is really the output of the halt_handler unit
+	input [15:0] pc,
+	input [15:0] instr,
+	
+	output reg [11:0] instr_addr,
+	output reg [3:0] opcode,		// opcode goes to decoder
+	
+	output reg [5:0] Rm,					// Rn, Rm go straight to register file
+	output reg [5:0] Rn,	
+	output reg [11:0] jump_addr
+	//output reg [15:0] next_pc;
 );
-
-//INPUTS
-input wire clk;						// clk is really the output of the halt_handler unit
-input wire[15:0] pc;		
-input wire[15:0] instr;
-
-//OUTPUTS
-output reg [11:0] instr_addr;
-output reg [3:0] opcode;			// opcode goes to decoder
-output reg [5:0] Rm;					// Rn, Rm go straight to register file
-output reg [5:0] Rn;		
-
-//INTERNAL 
-output reg [11:0] jump_addr;		
-//output reg [15:0] next_pc;
 
 /*pc_select PC_SEL(
 	.pc(pc), 
