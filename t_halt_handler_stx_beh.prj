@@ -1,4 +1,0 @@
-verilog isim_temp "debouncer.v"
-verilog isim_temp "halt_handler.v"
-verilog isim_temp "t_halt_handler.v"
-verilog isim_temp "C:/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v"
