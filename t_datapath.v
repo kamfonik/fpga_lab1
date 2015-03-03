@@ -15,7 +15,7 @@ module t_datapath;
 	// Inputs
 	reg clk;
 	reg resume;
-	reg [15:0] pc;
+	//reg [15:0] pc;
 	//reg [15:0] instr;
 	
 	// Outputs
@@ -26,9 +26,11 @@ module t_datapath;
 	wire [5:0] Rm;
 	wire [5:0] Rn;
 	wire [11:0] jump_addr;
-	//wire next_pc;
 	wire [11:0] instr_addr;
 	wire [15:0] instr;
+	
+	wire [15:0] prev_pc;
+	wire [15:0] next_pc;
 
 
 	// Instantiate the Unit Under Test (UUT)
@@ -36,7 +38,7 @@ module t_datapath;
 		.clk(clk), 
 		.resume(resume),
 		.fetch_clk(fetch_clk),
-		.pc(pc),
+		//.pc(pc),
 		.instr(instr),
 		.instr_addr(instr_addr),
 		.opcode(opcode),
@@ -44,13 +46,14 @@ module t_datapath;
 		.Rn(Rn), 
 		.clk_dis(clk_dis), 
 		.jump_en(jump_en), 
-		.jump_addr(jump_addr) 
-		//.next_pc(next_pc),  
+		.jump_addr(jump_addr), 
+		.next_pc(next_pc),
+		.prev_pc(prev_pc)
 	);
 
 	initial begin
 		// Initialize Inputs
-		pc = 16'b0000_0000_0000_0000;
+		//pc = 16'b0000_0000_0000_0000;
 		//instr = 16'b1111_1111_1111_1111;	 //right now this is a nonsense value		
 		clk = 0;
 		resume = 0;
@@ -60,23 +63,8 @@ module t_datapath;
         
 		// Add stimulus here
 		
-		repeat (3) begin
-			#100 pc = pc + 1;
-		end
-/*			#20 instr = 16'b0100_1111_0000_1111;
-
-			#20 instr = instr + 1;
-			
-			#20 instr = 16'b0000_0000_0000_0000;	//halt	
-
-			#20 instr = instr + 1;
-			
-			#150 resume = 1;
-			#800 resume = 0;
-			
-			#20 instr = 16'b0011_0000_1111_1111;*/
-
-			
+		repeat (5)
+			#50 clk = !clk;
 			
 			
 
@@ -85,8 +73,8 @@ module t_datapath;
 
 	end
    
-	always
-		#50 clk = !clk;
+	//always
+	//	#50 clk = !clk;
 		
 endmodule
 

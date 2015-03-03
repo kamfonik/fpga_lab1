@@ -21,7 +21,7 @@ module datapath(
 	//input clk_dis,
 	
 	//INSTRUCTION FETCH
-	input [15:0] pc,		
+	//input [15:0] pc,		
 	//input [15:0] instr,
 	
 	output wire fetch_clk,
@@ -30,14 +30,18 @@ module datapath(
 	output wire [5:0] Rm,
 	output wire [5:0] Rn,
 	output wire [11:0] jump_addr,
+	output wire [15:0] prev_pc,		// eventually to R6, right now straight to PC_SEL
 	
 	//DECODER
 	output wire clk_dis,
 	output wire jump_en,
 	
 	//MEMORY
-	output [15:0] instr
+	output [15:0] instr,
 	
+	//PC_SEL
+	//input [15:0] prev_pc,
+	output [15:0] next_pc
 );
 
 
@@ -80,13 +84,14 @@ halt_handler HALT(
 
 instr_fetch IF(
 	.clk(fetch_clk),
-	.pc(pc),	
+	.pc(next_pc),	
 	.instr(instr),
 	.instr_addr(instr_addr),
 	.opcode(opcode),
 	.Rm(Rm),
 	.Rn(Rn),
-	.jump_addr(jump_addr)
+	.jump_addr(jump_addr),
+	.pc_out(prev_pc)
 );
 
 decoder DECODE(
@@ -100,18 +105,13 @@ memory MEM(
 	.instr_out(instr)
 );
 
-/*NOTE THAT THE OPCODES ARE IN THE WRONG PLACE, FIX BEFORE USING*/
-/*initial begin
-	instr_mem[12'b0000_0000_0000] = 16'b0000_0010_0000_1000;	//1
-	instr_mem[12'b0000_0000_0001] = 16'b0000_0000_0000_0000; //3
-	instr_mem[12'b0000_0000_0010] = 16'b0000_0010_0000_0011; //4
-	instr_mem[12'b0000_0000_0011] = 16'b0000_0010_0000_1001; //5
-	instr_mem[12'b0000_0000_1000] = 16'b0000_0010_0000_0001; //2
-	instr_mem[12'b0000_0000_1001] = 16'b0000_0010_0000_0000; //6
-	instr_mem[12'b0000_0000_1001] = 16'b0000_0010_0000_0000; //7 - JUMPS BACK TO 1
-end*/
+pc_select PC_SEL(
+	.pc(prev_pc),
+	.jump_addr(jump_addr),
+	.jump_en(jump_en),
+	.next_pc(next_pc)
+);
 
-//assign instr = instr_mem[instr_addr];
 
 
 endmodule

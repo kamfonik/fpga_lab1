@@ -20,9 +20,13 @@ module instr_fetch(
 	
 	output reg [5:0] Rm,					// Rn, Rm go straight to register file
 	output reg [5:0] Rn,	
-	output reg [11:0] jump_addr
-	//output reg [15:0] next_pc;
+	output reg [11:0] jump_addr,
+	output reg [15:0] pc_out
 );
+
+initial begin
+pc_out = 16'b0000_0000_0000_0000;
+end
 
 /*pc_select PC_SEL(
 	.pc(pc), 
@@ -42,5 +46,6 @@ begin
 	Rn = instr[11:6];
 	Rm = instr[5:0];
 	jump_addr = instr[11:0];
+	pc_out = pc;
 end
 endmodule
