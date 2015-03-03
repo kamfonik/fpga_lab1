@@ -12,13 +12,13 @@
 ////////////////////////////////////////////////////////////////////////////////////
 module datapath(
 	input clk,					// FPGA board clock signal
-	input wire resume,		// resume-execution pushbutton
+	input resume,		// resume-execution pushbutton
 	
 	
 	// all following "inputs"/"outputs" will eventually be internal wires
-
+	
 	//HALT HANDLER
-	input clk_dis,
+	//input clk_dis,
 	
 	//INSTRUCTION FETCH
 	input [15:0] pc,		
@@ -29,12 +29,13 @@ module datapath(
 	output wire [3:0] opcode,
 	output wire [5:0] Rm,
 	output wire [5:0] Rn,
-	output wire [11:0] jump_addr
+	output wire [11:0] jump_addr,
 	
-	
+	//DECODER
+	output wire clk_dis,
+	output wire jump_en
 	
 );
-
 
 
 //internal wires
@@ -85,11 +86,11 @@ instr_fetch IF(
 	.jump_addr(jump_addr)
 );
 
-/*decoder DECODE(
+decoder DECODE(
 	.opcode(opcode),
 	.clk_dis(clk_dis),
 	.jump_en(jump_en)
-);*/
+);
 
 
 /*NOTE THAT THE OPCODES ARE IN THE WRONG PLACE, FIX BEFORE USING*/

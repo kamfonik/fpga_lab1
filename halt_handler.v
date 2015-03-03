@@ -29,7 +29,7 @@ clk_out
 
 //INPUTS
 input wire clk;
-input wire clk_dis;
+input wire clk_dis;			// from decoder
 input wire button;
 
 //OUTPUTS

@@ -37,6 +37,8 @@ module t_decoder;
 		opcode = 4'b0100;
 		#50 opcode = 4'b0000;
 		#50 opcode = 4'b0011;
+		#50 opcode = 4'b0000;
+		#50 opcode = 5'b0010;
 	end
       
 endmodule

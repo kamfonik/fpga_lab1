@@ -6,6 +6,7 @@ Determining compilation order of HDL files
 Analyzing Verilog file "C:/Users/kamfonik/Documents/Git_Repos/fpga_lab1/debouncer.v" into library work
 Analyzing Verilog file "C:/Users/kamfonik/Documents/Git_Repos/fpga_lab1/instr_fetch.v" into library work
 Analyzing Verilog file "C:/Users/kamfonik/Documents/Git_Repos/fpga_lab1/halt_handler.v" into library work
+Analyzing Verilog file "C:/Users/kamfonik/Documents/Git_Repos/fpga_lab1/decoder.v" into library work
 Analyzing Verilog file "C:/Users/kamfonik/Documents/Git_Repos/fpga_lab1/datapath.v" into library work
 Analyzing Verilog file "C:/Users/kamfonik/Documents/Git_Repos/fpga_lab1/t_datapath.v" into library work
 Analyzing Verilog file "C:/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v" into library work
@@ -14,11 +15,12 @@ Completed static elaboration
 Compiling module debouncer
 Compiling module halt_handler
 Compiling module instr_fetch
+Compiling module decoder
 Compiling module datapath
 Compiling module t_datapath
 Compiling module glbl
 Time Resolution for simulation is 1ps.
-Compiled 6 Verilog Units
+Compiled 7 Verilog Units
 Built simulation executable C:/Users/kamfonik/Documents/Git_Repos/fpga_lab1/t_datapath_isim_beh.exe
-Fuse Memory Usage: 26792 KB
-Fuse CPU Usage: 437 ms
+Fuse Memory Usage: 26796 KB
+Fuse CPU Usage: 452 ms
